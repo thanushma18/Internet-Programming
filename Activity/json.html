@@ -1,0 +1,52 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Examples</title>
+</head>
+<body>
+
+    <h2>1. JSON Object</h2>
+    <p id="obj"></p>
+
+    <h2>2. JSON Array</h2>
+    <p id="arr"></p>
+
+    <h2>3. Nested JSON Object</h2>
+    <p id="nested"></p>
+
+    <script>
+        const object = {
+            "name": "Rahul",
+            "age": 20
+        };
+
+        const array = ["Java", "Python", "HTML"];
+
+        const nested = {
+            "student": {
+                "name": "Rahul",
+                "age": 20,
+                "address": {
+                    "city": "Chennai",
+                    "state": "Tamil Nadu"
+                }
+            }
+        };
+
+        document.getElementById("obj").innerHTML =
+            "Name: " + object.name + "<br>Age: " + object.age;
+
+        document.getElementById("arr").innerHTML =
+            array.join(", ");
+
+        document.getElementById("nested").innerHTML =
+            "Name: " + nested.student.name +
+            "<br>Age: " + nested.student.age +
+            "<br>City: " + nested.student.address.city +
+            "<br>State: " + nested.student.address.state;
+    </script>
+
+</body>
+</html>
+```
